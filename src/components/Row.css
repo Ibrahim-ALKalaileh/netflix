@@ -19,11 +19,12 @@
     object-fit: contain;
     max-height: 100px;
     margin-right: 10px;
-    transition: tranform 450ms;
+    -webkit-transition: transform 500ms ease-in-out;
 }
 
 .row__poster:hover{
     transform:scale(1.08);
+    opacity: 1;
     
 }
 .row__posterLarge{
