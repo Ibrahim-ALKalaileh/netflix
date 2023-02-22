@@ -1,4 +1,4 @@
-import react,{ useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Nav.css'
 import logo from "../assets/img/logo.png"
 import avatar from "../assets/img/avatar.png"
@@ -25,9 +25,9 @@ return ()=> window.removeEventListener("scroll",transitionNavBar);
       <div className='nav__contents'>
 
       
-        <img src={logo} alt="" className='nav__logo'/>
+        <img src={logo} alt="logo" className='nav__logo'/>
 
-        <img src={avatar} alt='' className='nav__avatar'/>
+        <img src={avatar} alt='avatar' className='nav__avatar'/>
     
       </div>
 

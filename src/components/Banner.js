@@ -1,6 +1,5 @@
-import React, { useEffect,useState } from 'react'
+import { useEffect,useState } from 'react'
 import './Banner.css'
-import banner from '../assets/img/Banner.jpg'
 import axios from "../axios"
 import requests from '../Requests'
 
@@ -33,13 +32,15 @@ function Banner() {
         backgroundPosition:"center center"
     }}>
         <div className='banner__contents'>
-            <h1 className='banner__title'>Movie Name</h1>
+            <h1 className='banner__title'>
+                {movie?.title || movie?.name || movie?.original_name}
+            </h1>
             <div className='banner__buttons'>
                 <button className='banner__button'>Play</button>
                 <button className='banner__button'>My List</button>
             </div>
             <h1 className='banner__description'>
-                 {truncate('this is my descriptitis is my ription testis is my deion test', 50)}
+                 {truncate(movie?.overview, 100)}
                  </h1>
         </div>
 
